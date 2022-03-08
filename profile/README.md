@@ -4,7 +4,7 @@
 
 ![image](https://user-images.githubusercontent.com/4110292/124995036-bbd1f900-e014-11eb-804e-e1f0be9557d6.png)
 
-This is an issues-only repo for [Warp](https://www.warp.dev), a [blazingly-fast modern Rust based GPU-accelerated terminal](https://blog.warp.dev/how-warp-works/) built to make [you and your team more productive.](https://blog.warp.dev/how-we-design-warp-our-product-philosophy/)
+[Warp](https://www.warp.dev) is a [blazingly-fast modern Rust based GPU-accelerated terminal](https://blog.warp.dev/how-warp-works/) built to make [you and your team more productive.](https://blog.warp.dev/how-we-design-warp-our-product-philosophy/)
 
 ## Installation
 We are currently in a closed beta, you can join the [waitlist](https://www.warp.dev) or our [Discord](https://discord.gg/warpdotdev), we drop invites frequently!
