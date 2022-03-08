@@ -1,1 +1,1 @@
-.GITHUB README
+Template for new repos
