@@ -7,7 +7,7 @@
 [Warp](https://www.warp.dev) is a [blazingly-fast modern Rust based GPU-accelerated terminal](https://blog.warp.dev/how-warp-works/) built to make [you and your team more productive.](https://blog.warp.dev/how-we-design-warp-our-product-philosophy/)
 
 ## Installation
-We are currently in a closed beta, you can join the [waitlist](https://www.warp.dev) or our [Discord](https://discord.gg/warpdotdev), we drop invites frequently!
+Download Warp from our website: https://warp.dev
 
 ## Platform support
 Warp is currently Mac-only, although we have plans to support [linux](https://github.com/warpdotdev/Warp/issues/120), [windows](https://github.com/warpdotdev/Warp/issues/204) and the web.
