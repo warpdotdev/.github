@@ -10,6 +10,8 @@
   <a href="https://warp.dev/blog">Blog</a>
 </p>
 
+<img width="1025" alt="Screen Shot 2022-04-05 at 01 59 53" src="https://user-images.githubusercontent.com/29553206/161688541-2889478f-d02e-497c-8340-41569e579a42.png">
+
 <h1></h1>
 
 This is an issues-only repo for [Warp](https://www.warp.dev), a [blazingly-fast modern Rust based GPU-accelerated terminal](https://www.warp.dev/blog/how-warp-works) built to make [you and your team more productive.](https://www.warp.dev/blog/how-we-design-warp-our-product-philosophy)
