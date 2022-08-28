@@ -1,19 +1,25 @@
 name: SSH Issues? Use this template
 description: "Issue template specialized for the circumstances where the shell doesn't bootstrap over SSH"
 body:
-  - type: textarea
+  - type: input
     id: "discord"
     attributes:
       label: "Discord username (optional)"
       description: "If you're in our Discord server please include your formatted like so: elvis#4747. This is so we can give you the Bug Catcher Discord role."
-      placeholder: username#4747.
-      render: text
+      placeholder: "username#4747"
     validations:
       required: false
   - type: input
-    id: "shell"
+    id: "local-shell"
     attributes:
-      label: "Shell and Version"
+      label: "Local Shell and Version"
+      description: "Output of `echo $BASH_VERSION` or `echo $ZSH_VERSION`"
+    validations:
+      required: true
+  - type: input
+    id: "remote-shell"
+    attributes:
+      label: "Remote Shell and Version"
       description: "Output of `echo $BASH_VERSION` or `echo $ZSH_VERSION`"
     validations:
       required: true
@@ -24,6 +30,13 @@ body:
       description: "e.g. Debian 11.2"
     validations:
       required: true
+  - type: input
+    id: "warp-version"
+    attributes:
+      label: "Warp Version"
+      description: "Click the 3-dots menu docked to the right of the tabs in Warp and click the copy button, e.g. `v0.2022.05.30.09.10.stable_01`"
+    validations:
+      required: true
   - type: checkboxes
     id: "rcfiles"
     attributes:
@@ -31,8 +44,7 @@ body:
       description: "If the issue is with your system and user rcfiles, please isolate the issue more (e.g. to a particular plugin, or a line of shell code) and open a general issue."
       options:
       - label: "Yes"
-    validations:
-      required: true
+        required: true
   - type: textarea
     id: "screenshots"
     attributes:
@@ -48,5 +60,16 @@ body:
       2. Run WARP_DEBUG_MODE=1 ssh YOUR-HOSTNAME-HERE
       3. Save the full output starting from the ssh command block. If you’re not comfortable posting the outputs to a public issue, you can email feedback@warp.dev.
       "
+    validations:
+      required: true
+  - type: dropdown
+    id: "triage"
+    attributes:
+      label: "Warp Internal (ignore) - linear-label:e7dfaa84-5fdb-4a00-b754-d8912da923fa"
+      multiple: false
+      options:
+        - Ignore
+        # - Windows
+        # - Linux
     validations:
       required: false

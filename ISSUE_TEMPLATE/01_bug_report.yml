@@ -15,35 +15,29 @@ body:
       label: "Describe the bug"
       description: "A clear and concise description of what the bug is."
       placeholder: Tell us what you see.
-      render: text
     validations:
       required: true
   - type: textarea
     id: "to-reproduce"
     attributes:
       label: "To Reproduce"
-      value: |
-        Steps to reproduce:
-        1. Go to '...'
-        2. Click on '...'
-        3. Scroll down to '...'
-        4. See error '...'
+      description: "Bug reports with clear reproduction will get prioritized higher and addressed more quickly."
+      placeholder: "Steps to reproduce: 1. Go to '...' 2. Click on '...' 3. Scroll down to '...' 4. See error '...'"
     validations:
-      required: false
+      required: true
   - type: textarea
     id: "expected-behaviour"
     attributes:
       label: "Expected behaviour"
       description: "A clear and concise description of what you expected to happen."
       placeholder: Tell us what you expect to see.
-      render: text
     validations:
       required: false
   - type: textarea
     id: "screenshots"
     attributes:
       label: "Screenshots"
-      description: "If applicable, add screenshots to help explain your problem."
+      description: "If applicable, add screenshots to help explain your problem. While optional, screenshots help expedite the time in which your bug is addressed."
     validations:
       required: false
   - type: dropdown
@@ -63,12 +57,47 @@ body:
       label: "OS Version"
       description: "For example, `11.4`."
     validations:
-      required: false
+      required: true
+  - type: input
+    id: "shell-version"
+    attributes:
+      label: "Shell Version"
+      description: "For example, `bash 4.0` e.g. Run `bash --version` or `zsh --version`"
+    validations:
+      required: true
+  - type: input
+    id: "warp-version"
+    attributes:
+      label: "Warp Version"
+      description: "Open the Settings Dialog (CMD-,) using the Command Palette or by clicking the three dots > Settings > Account. Once you're on the Account page click the copy icon that's to the right of the version number. `v0.2047.04.07.47.47.stable_47`"
+    validations:
+      required: true
   - type: textarea
     id: "additional-context"
     attributes:
       label: "Additional context"
       description: "Add any other context about the problem here."
-      render: text
     validations:
       required: false
+  - type: dropdown
+    id: "blocker"
+    attributes:
+      label: "Does this block you from using Warp daily?"
+      description: "All feedback will be reviewed, even if you select 'No'."
+      multiple: false
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: dropdown
+    id: "triage"
+    attributes:
+      label: "Warp Internal (ignore): linear-label:b8107fdf-ba31-488d-b103-d271c89cac3e"
+      
+      multiple: false
+      options:
+        - Ignore
+    validations:
+      required: false
+
