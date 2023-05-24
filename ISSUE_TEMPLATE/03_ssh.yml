@@ -1,5 +1,6 @@
 name: SSH Issues? Use this template
 description: "Issue template specialized for the circumstances where the shell doesn't bootstrap over SSH"
+labels: ["Bug","SSH"]
 body:
   - type: input
     id: "discord"
@@ -9,25 +10,36 @@ body:
       placeholder: "username#4747"
     validations:
       required: false
-  - type: input
-    id: "local-shell"
-    attributes:
-      label: "Local Shell and Version"
-      description: "Output of `echo $BASH_VERSION` or `echo $ZSH_VERSION`"
-    validations:
-      required: true
-  - type: input
-    id: "remote-shell"
-    attributes:
-      label: "Remote Shell and Version"
-      description: "Output of `echo $BASH_VERSION` or `echo $ZSH_VERSION`"
-    validations:
-      required: true
-  - type: input
+  - type: dropdown
     id: "os"
     attributes:
+      label: "Operating System"
+      multiple: false
+      options:
+        - MacOS
+        - Linux
+        # - Windows
+    validations:
+      required: true
+  - type: input
+    id: "os-version"
+    attributes:
       label: "Operating System and Version"
-      description: "e.g. Debian 11.2"
+      description: "For example: Debian 11.2"
+    validations:
+      required: true
+  - type: input
+    id: "local-shell-version"
+    attributes:
+      label: "Local Shell Version"
+      description: "Output of `echo $BASH_VERSION` or `echo $ZSH_VERSION`"
+    validations:
+      required: true
+  - type: input
+    id: "remote-shell-version"
+    attributes:
+      label: "Remote Shell Version"
+      description: "Output of `echo $BASH_VERSION` or `echo $ZSH_VERSION`"
     validations:
       required: true
   - type: input
@@ -56,20 +68,47 @@ body:
     id: "xtrace-output"
     attributes:
       label: "Include shell xtrace output"
-      description: "1. Ensure you're on the 3.31 version of Warp or later.
-      2. Run WARP_DEBUG_MODE=1 ssh YOUR-HOSTNAME-HERE
-      3. Save the full output starting from the ssh command block. If you’re not comfortable posting the outputs to a public issue, you can email feedback@warp.dev.
-      "
+      description: "1. Ensure you're on the 3.31 version of Warp or later. 2. Run WARP_DEBUG_MODE=1 ssh YOUR-HOSTNAME-HERE 3. Save the full output starting from the ssh command block. If you’re not comfortable posting the outputs to a public issue, you can email feedback@warp.dev. "
     validations:
       required: true
   - type: dropdown
-    id: "triage"
+    id: "blocker"
+    attributes:
+      label: "Does this block you from using Warp daily?"
+      description: "All feedback will be reviewed, even if you select 'No'."
+      multiple: false
+      options:
+        - "No"
+        - "Yes, this issue prevents me from using Warp daily."
+    validations:
+      required: true
+  - type: dropdown
+    id: "terminals"
+    attributes:
+      label: "Is this a Warp specific issue? (i.e. does it happen in Terminal, iTerm, Kitty, etc.)"
+      description: "Verifying this issue doesn't happen in other terminals helps us to prioritize the fix"
+      multiple: false
+      options:
+        - "No, this same issue happens in Warp and other terminals."
+        - "Yes, this I confirmed this only happens in Warp, not other terminals."
+        - "N/A, the issue only applies to a Warp specific feature. (i.e. Warp AI, Workflows)"
+    validations:
+      required: true
+  - type: dropdown
+    id: "linear-label-ssh"
     attributes:
       label: "Warp Internal (ignore) - linear-label:e7dfaa84-5fdb-4a00-b754-d8912da923fa"
       multiple: false
       options:
         - Ignore
-        # - Windows
-        # - Linux
+    validations:
+      required: false
+  - type: dropdown
+    id: "linear-label-bug"
+    attributes:
+      label: "Warp Internal (ignore): linear-label:b8107fdf-ba31-488d-b103-d271c89cac3e"
+      multiple: false
+      options:
+        - Ignore
     validations:
       required: false

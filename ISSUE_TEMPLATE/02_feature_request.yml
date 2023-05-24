@@ -1,7 +1,8 @@
 name: Feature Request
-description: "Have a great new idea? We'd love to know, please look through our existing issues, and upvote it if its already been filed."
+description: "Have a great new idea? We'd love to know, please search through our existing feature requests, and upvote it if its already been filed."
+labels: ["Feature"]
 body:
-  - type: input  
+  - type: input
     id: "discord"
     attributes:
       label: "Discord username (optional)"
@@ -14,7 +15,7 @@ body:
     attributes:
       label: "Describe the solution you'd like?"
       description: "A clear and concise description of what you want to happen."
-      render: text
+      render: Text
     validations:
       required: true
   - type: textarea
@@ -23,7 +24,7 @@ body:
       label: "Is your feature request related to a problem? Please describe."
       description: "A clear and concise description of what the problem is."
       placeholder: "I'm always frustrated when [...]"
-      render: text
+      render: Text
     validations:
       required: false
   - type: textarea
@@ -47,7 +48,7 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: "triage"
+    id: "linear-label-feature"
     attributes:
       label: "Warp Internal (ignore) - linear-label:770f6576-d6c0-4e4f-a259-fc64b5156087"
       multiple: false

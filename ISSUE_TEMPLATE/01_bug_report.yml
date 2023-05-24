@@ -1,5 +1,6 @@
 name: Bug Report
-description: "Found a bug? Help us by reporting it, we'd love if you'd first take a look through our open issues, to make sure the issue isn't already filed."
+description: "Found a bug? We'd appreciate if you'd first search through our open issues and docs, to make sure the issue isn't already known."
+labels: ["Bug"]
 body:
   - type: input
     id: "discord"
@@ -26,9 +27,9 @@ body:
     validations:
       required: true
   - type: textarea
-    id: "expected-behaviour"
+    id: "expected-behavior"
     attributes:
-      label: "Expected behaviour"
+      label: "Expected behavior"
       description: "A clear and concise description of what you expected to happen."
       placeholder: Tell us what you expect to see.
     validations:
@@ -47,31 +48,31 @@ body:
       multiple: false
       options:
         - MacOS
+        - Linux
         # - Windows
-        # - Linux
-    validations:
-      required: false
-  - type: input
-    id: "os-version"
-    attributes:
-      label: "OS Version"
-      description: "For example, `11.4`."
     validations:
       required: true
   - type: input
-    id: "shell-version"
+    id: "os-version"
+    attributes:
+      label: "Operating System and Version"
+      description: "For example: Debian 11.2"
+    validations:
+      required: true
+  - type: input
+    id: "local-shell-version"
     attributes:
       label: "Shell Version"
       description: "For example, `bash 4.0` e.g. Run `bash --version` or `zsh --version`"
     validations:
-      required: true
+      required: false
   - type: input
     id: "warp-version"
     attributes:
       label: "Warp Version"
       description: "Open the Settings Dialog (CMD-,) using the Command Palette or by clicking the three dots > Settings > Account. Once you're on the Account page click the copy icon that's to the right of the version number. `v0.2047.04.07.47.47.stable_47`"
     validations:
-      required: true
+      required: false
   - type: textarea
     id: "additional-context"
     attributes:
@@ -86,15 +87,26 @@ body:
       description: "All feedback will be reviewed, even if you select 'No'."
       multiple: false
       options:
-        - "Yes"
         - "No"
+        - "Yes, this issue prevents me from using Warp daily."
     validations:
       required: true
   - type: dropdown
-    id: "triage"
+    id: "terminals"
+    attributes:
+      label: "Is this a Warp specific issue? (i.e. does it happen in Terminal, iTerm, Kitty, etc.)"
+      description: "Verifying this issue doesn't happen in other terminals helps us to prioritize the fix"
+      multiple: false
+      options:
+        - "No, this same issue happens in Warp and other terminals."
+        - "Yes, this I confirmed this only happens in Warp, not other terminals."
+        - "N/A, the issue only applies to a Warp specific feature. (i.e. Warp AI, Workflows)"
+    validations:
+      required: true
+  - type: dropdown
+    id: "linear-label-bug"
     attributes:
       label: "Warp Internal (ignore): linear-label:b8107fdf-ba31-488d-b103-d271c89cac3e"
-      
       multiple: false
       options:
         - Ignore
