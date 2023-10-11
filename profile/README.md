@@ -1,11 +1,13 @@
 <p align="center">
     <a href="https://app.warp.dev/get_warp">
-    <img width="600" alt="horz - dark" src="https://user-images.githubusercontent.com/29553206/161685377-cb458631-eb2e-454f-aab7-3f5bfec745ee.png">
+    <img width="500" alt="horz - dark" src="https://storage.googleapis.com/warpdotdev-content/warp-github-dark.png">
     </a>
 </p>
 
 <p align="center">
   <a href="https://warp.dev">Website</a>
+  ·
+  <a href="https://warp.dev/warp-drive">Warp Drive</a>
   ·
   <a href="https://warp.dev/warp-ai">Warp AI</a>
   ·
