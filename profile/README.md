@@ -22,12 +22,11 @@
 
 ## About
 
-This is an issues-only repo for [Warp](https://www.warp.dev), the Agentic Development Environment and fastest way to build with multiple AI agents — from writing code to shipping it.
+We built Warp to solve two problems we kept hitting as a team writing software: terminals haven't kept up with how developers work today, and agentic development tools don't scale beyond your laptop.
 
-Warp is:
-* Designed for agentic workflows: prompt, manage, and collaborate with AI agents across your codebase
-* Built in Rust and GPU acceleration for fast, native performance
-* Available on macOS, Linux, and Windows
+**Warp is a modern terminal built for coding with agents.** Warp brings the terminal into the 21st century with modern UI and code editing features. Use Warp’s SOTA built-in agent Oz, or run CLI coding agents like Claude Code, Codex, or Gemini CLI.
+
+**Oz is an orchestration platform for cloud agents.** Spin up unlimited parallel coding agents that are programmable, auditable, and fully steerable. Automate repetitive tasks, build on agents, and run them in parallel in the cloud. [Create an agent →](http://warp.dev/oz) 
 
 ## Installation
 
