@@ -1,8 +1,9 @@
 <a href="https://www.warp.dev">
-    <img width="1024" alt="Warp Agentic Development Environment product preview" src="https://storage.googleapis.com/warpdotdev-content/Readme.png">
+    <img width="1448" alt="Warp Agentic Development Products" src="https://github.com/user-attachments/assets/f783af23-3531-40cd-baf2-e6f5c696bcb3" />
 </a>
 
 <p align="center">
+
   <a href="https://www.warp.dev">Website</a>
   ·
   <a href="https://www.warp.dev/code">Code</a>
