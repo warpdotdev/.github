@@ -3,7 +3,6 @@
 </a>
 
 <p align="center">
-
   <a href="https://www.warp.dev">Website</a>
   ·
   <a href="https://www.warp.dev/code">Code</a>
@@ -18,8 +17,6 @@
   ·
   <a href="https://www.warp.dev/blog/how-warp-works">How Warp Works</a>
 </p>
-
-<h1></h1>
 
 ## About Warp
 
