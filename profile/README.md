@@ -1,5 +1,5 @@
 <a href="https://www.warp.dev">
-    <img width="1024" alt="Warp Agentic Development Environment product preview" src="https://storage.googleapis.com/warpdotdev-content/Readme.png">
+    <img width="1448" alt="Warp Agentic Development Products" src="https://github.com/user-attachments/assets/f783af23-3531-40cd-baf2-e6f5c696bcb3" />
 </a>
 
 <p align="center">
@@ -18,9 +18,7 @@
   <a href="https://www.warp.dev/blog/how-warp-works">How Warp Works</a>
 </p>
 
-<h1></h1>
-
-## About
+## About Warp
 
 We built Warp to solve two problems we kept hitting as a team writing software: terminals haven't kept up with how developers work today, and agentic development tools don't scale beyond your laptop.
 
@@ -28,9 +26,11 @@ We built Warp to solve two problems we kept hitting as a team writing software: 
 
 **Oz is an orchestration platform for cloud agents.** Spin up unlimited parallel coding agents that are programmable, auditable, and fully steerable. Automate repetitive tasks, build on agents, and run them in parallel in the cloud. [Create an agent →](http://warp.dev/oz) 
 
-## Installation
+## Getting started
 
-You can [download Warp](https://www.warp.dev/download) and [read our docs](https://docs.warp.dev/) for platform-specific instructions.
+[Download](https://www.warp.dev/download) the Warp app and [read our docs](https://docs.warp.dev/) if you're just getting started with Warp.
+
+You can also take a look at the open-source [oz-skills](https://github.com/warpdotdev/oz-skills) and [oz-dev-environments](https://github.com/warpdotdev/oz-dev-environments) that you can use via [cloud agents](https://docs.warp.dev/agent-platform/cloud-agents/cloud-agents-overview).
 
 ## Changelog and Releases
 
