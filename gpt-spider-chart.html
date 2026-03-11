@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPT-4o vs GPT-5 — Warp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ── Warp Brand Tokens ─────────────────────────────────── */
+    :root {
+      --warp-black:    #121212;
+      --warp-off-white:#faf9f6;
+      --warp-white:    #ffffff;
+      --warp-purple:   #754dac;
+      --warp-pink:     #a43787;
+      --warp-stroke:   #d8c8d4;
+      --warp-n95:      #1e1e1d;
+      --warp-n90:      #292929;
+      --warp-n80:      #404040;
+      --warp-n70:      #585756;
+      --warp-n60:      #6f6e6d;
+      --warp-n30:      #b4b4b2;
+      --ff-sans:  'Matter', 'DM Sans', system-ui, sans-serif;
+      --ff-mono:  'Matter Mono', 'Roboto Mono', monospace;
+      --space-2:  8px;
+      --space-3:  12px;
+      --space-4:  16px;
+      --space-6:  24px;
+      --space-8:  32px;
+      --space-12: 48px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--warp-black);
+      color: var(--warp-off-white);
+      font-family: var(--ff-sans);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-12) var(--space-6);
+    }
+
+    /* ── Card ──────────────────────────────────────────────── */
+    .card {
+      background: var(--warp-n95);
+      border: 1px solid #2a2a29;
+      width: 600px;
+      max-width: 100%;
+      padding: 40px;
+    }
+
+    /* ── Header ────────────────────────────────────────────── */
+    .eyebrow {
+      font-family: var(--ff-mono);
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--warp-pink);
+      margin-bottom: var(--space-2);
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--warp-white);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+
+    .subtitle {
+      font-family: var(--ff-mono);
+      font-size: 11px;
+      color: var(--warp-n60);
+      margin-top: var(--space-2);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ── Chart area ────────────────────────────────────────── */
+    .chart-area {
+      margin: var(--space-8) 0 var(--space-6);
+      display: flex;
+      justify-content: center;
+    }
+
+    .chart-area svg {
+      width: 100%;
+      max-width: 520px;
+      overflow: visible;
+    }
+
+    /* ── Legend ────────────────────────────────────────────── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--warp-n90);
+      margin-bottom: var(--space-4);
+    }
+
+    .legend {
+      display: flex;
+      gap: var(--space-8);
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-family: var(--ff-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--warp-n30);
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── Footnote ──────────────────────────────────────────── */
+    .footnote {
+      margin-top: var(--space-4);
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      color: var(--warp-n70);
+      letter-spacing: 0.04em;
+      line-height: 1.6;
+    }
+
+    .footnote strong {
+      color: var(--warp-n60);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <!-- Header -->
+    <div class="eyebrow">Model Benchmark</div>
+    <h1>GPT-4o vs GPT-5</h1>
+    <div class="subtitle">Speed &nbsp;·&nbsp; Intelligence &nbsp;·&nbsp; Cost Efficiency</div>
+
+    <!-- Spider Chart -->
+    <!--
+      Layout:
+        Center:            (260, 215)
+        Max axis radius:   150px
+
+      Axis unit vectors (SVG coords):
+        Speed:             (0, -150)       tip → (260, 65)
+        Intelligence:      (+130, +75)     tip → (390, 290)
+        Cost Efficiency:   (-130, +75)     tip → (130, 290)
+
+      Grid ring vertices at fraction f:
+        Speed:  (260, 215 - f×150)
+        Intel:  (260 + f×130, 215 + f×75)
+        Cost:   (260 - f×130, 215 + f×75)
+
+      Scores (out of 10) — estimated:
+        GPT-4o:   Speed=8   Intel=7   Cost=8
+        GPT-5:    Speed=5   Intel=10  Cost=3
+
+      GPT-4o polygon:
+        Speed(8):  (260, 215-120) = (260, 95)
+        Intel(7):  (260+91, 215+52.5) = (351, 267.5)
+        Cost(8):   (260-104, 215+60)  = (156, 275)
+
+      GPT-5 polygon:
+        Speed(5):  (260, 215-75)   = (260, 140)
+        Intel(10): (260+130,215+75)= (390, 290)
+        Cost(3):   (260-39, 215+22.5)= (221, 237.5)
+    -->
+    <div class="chart-area">
+      <svg width="520" height="370" viewBox="0 0 520 370" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- ── Grid rings ──────────────────────────────── -->
+        <!-- 20% -->
+        <polygon points="260,189 286,230 234,230"
+          fill="none" stroke="#252524" stroke-width="1"/>
+        <!-- 40% -->
+        <polygon points="260,163 312,245 208,245"
+          fill="none" stroke="#252524" stroke-width="1"/>
+        <!-- 60% -->
+        <polygon points="260,125 338,260 182,260"
+          fill="none" stroke="#252524" stroke-width="1"/>
+        <!-- 80% -->
+        <polygon points="260,95 364,275 156,275"
+          fill="none" stroke="#2e2e2d" stroke-width="1"/>
+        <!-- 100% — slightly brighter outer ring -->
+        <polygon points="260,65 390,290 130,290"
+          fill="none" stroke="#3a3938" stroke-width="1"/>
+
+        <!-- ── Axis spokes ──────────────────────────────── -->
+        <line x1="260" y1="215" x2="260" y2="65"  stroke="#3a3938" stroke-width="1"/>
+        <line x1="260" y1="215" x2="390" y2="290" stroke="#3a3938" stroke-width="1"/>
+        <line x1="260" y1="215" x2="130" y2="290" stroke="#3a3938" stroke-width="1"/>
+
+        <!-- ── Tick labels on Speed axis ──────────────── -->
+        <text x="264" y="233" fill="#3f3f3e"
+          font-family="'Roboto Mono',monospace" font-size="9" text-anchor="start">2</text>
+        <text x="264" y="199" fill="#3f3f3e"
+          font-family="'Roboto Mono',monospace" font-size="9" text-anchor="start">4</text>
+        <text x="264" y="165" fill="#3f3f3e"
+          font-family="'Roboto Mono',monospace" font-size="9" text-anchor="start">6</text>
+        <text x="264" y="131" fill="#3f3f3e"
+          font-family="'Roboto Mono',monospace" font-size="9" text-anchor="start">8</text>
+        <text x="264" y="97"  fill="#3f3f3e"
+          font-family="'Roboto Mono',monospace" font-size="9" text-anchor="start">10</text>
+
+        <!-- ── GPT-4o data polygon (Warp purple) ──────── -->
+        <polygon
+          points="260,95 351,267.5 156,275"
+          fill="#754dac"
+          fill-opacity="0.22"
+          stroke="#754dac"
+          stroke-width="2"
+          stroke-linejoin="round"
+        />
+        <!-- GPT-4o dots -->
+        <circle cx="260"  cy="95"    r="4.5" fill="#754dac"/>
+        <circle cx="351"  cy="267.5" r="4.5" fill="#754dac"/>
+        <circle cx="156"  cy="275"   r="4.5" fill="#754dac"/>
+
+        <!-- GPT-4o score labels -->
+        <text x="268" y="92"
+          fill="#9b7cc8" font-family="'Roboto Mono',monospace" font-size="10" text-anchor="start">8</text>
+        <text x="358" y="266"
+          fill="#9b7cc8" font-family="'Roboto Mono',monospace" font-size="10" text-anchor="start">7</text>
+        <text x="149" y="274"
+          fill="#9b7cc8" font-family="'Roboto Mono',monospace" font-size="10" text-anchor="end">8</text>
+
+        <!-- ── GPT-5 data polygon (Warp pink / accent) ─ -->
+        <polygon
+          points="260,140 390,290 221,237.5"
+          fill="#a43787"
+          fill-opacity="0.15"
+          stroke="#a43787"
+          stroke-width="2"
+          stroke-linejoin="round"
+        />
+        <!-- GPT-5 dots -->
+        <circle cx="260"  cy="140"   r="4.5" fill="#a43787"/>
+        <circle cx="390"  cy="290"   r="4.5" fill="#a43787"/>
+        <circle cx="221"  cy="237.5" r="4.5" fill="#a43787"/>
+
+        <!-- GPT-5 score labels -->
+        <text x="252" y="138"
+          fill="#c668a8" font-family="'Roboto Mono',monospace" font-size="10" text-anchor="end">5</text>
+        <text x="397" y="288"
+          fill="#c668a8" font-family="'Roboto Mono',monospace" font-size="10" text-anchor="start">10</text>
+        <text x="213" y="236"
+          fill="#c668a8" font-family="'Roboto Mono',monospace" font-size="10" text-anchor="end">3</text>
+
+        <!-- ── Axis labels ──────────────────────────────── -->
+        <!-- Speed (top-center) -->
+        <text x="260" y="49"
+          fill="#faf9f6"
+          font-family="'Roboto Mono',monospace"
+          font-size="11"
+          font-weight="500"
+          text-anchor="middle"
+          letter-spacing="2">SPEED</text>
+
+        <!-- Intelligence (bottom-right) -->
+        <text x="400" y="305"
+          fill="#faf9f6"
+          font-family="'Roboto Mono',monospace"
+          font-size="11"
+          font-weight="500"
+          text-anchor="start"
+          letter-spacing="1">INTELLIGENCE</text>
+
+        <!-- Cost Efficiency (bottom-left) -->
+        <text x="120" y="305"
+          fill="#faf9f6"
+          font-family="'Roboto Mono',monospace"
+          font-size="11"
+          font-weight="500"
+          text-anchor="end"
+          letter-spacing="1">COST EFF.</text>
+
+      </svg>
+    </div>
+
+    <!-- Legend -->
+    <hr class="divider">
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-dot" style="background: #754dac;"></div>
+        <span>GPT-4o</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: #a43787;"></div>
+        <span>GPT-5</span>
+      </div>
+    </div>
+
+    <!-- Footnote -->
+    <div class="footnote">
+      Scores are estimated (out of 10). GPT-5 specs are preliminary and subject to change.<br>
+      <strong>Cost efficiency:</strong> higher score = lower cost per token.
+      <strong>Speed:</strong> higher score = lower latency.
+    </div>
+
+  </div>
+</body>
+</html>
