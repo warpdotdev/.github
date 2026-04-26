@@ -36,20 +36,13 @@ You can also take a look at the open-source [oz-skills](https://github.com/warpd
 
 We try to release an update weekly, typically on Thursdays. Read our [changelog (release notes).](https://docs.warp.dev/getting-started/changelog)
 
-## Issues, Bugs, and Feature Requests
+## Open Source
 
-Please [search](https://github.com/warpdotdev/warp/issues?q=is%3Aissue+is%3Aopen+a+sort%3Areactions-%2B1-desc) through our existing issues for your bug (including workarounds) or feature request.
+Warp is open source! Contributions are welcome — see [CONTRIBUTING.md](https://github.com/warpdotdev/Warp/blob/main/CONTRIBUTING.md) for guidelines on how to get started.
 
-If you can't find a solution above, please file issue requests [in this repo!](https://github.com/warpdotdev/warp/issues/new/choose)
-We kindly ask that you please use our issue templates to make the issues easier to track for our team.
+The community has already been [contributing new themes](https://github.com/warpdotdev/themes), and our [Workflows repository](https://github.com/warpdotdev/workflows) is open for sharing and collaborating on useful command patterns.
 
-## Open Source & Contributing
-
-We are planning to first open-source our Rust UI framework, and then parts and potentially all of our client codebase. The server portion of Warp will remain closed-source for now.
-
-You can see how we’re thinking about open source here: [https://github.com/warpdotdev/Warp/discussions/400](https://github.com/warpdotdev/Warp/discussions/400)
-
-As a side note, we are open-sourcing our extension points as we go. The community has already been [contributing new themes](https://github.com/warpdotdev/themes), and our [Workflows repository](https://github.com/warpdotdev/workflows) is open for sharing and collaborating on useful command patterns.
+**Bugs and feature requests:** Please [search](https://github.com/warpdotdev/warp/issues?q=is%3Aissue+is%3Aopen+a+sort%3Areactions-%2B1-desc) through our existing issues for your bug (including workarounds) or feature request. If you can’t find a solution, please file a request [in this repo](https://github.com/warpdotdev/warp/issues/new/choose) using our issue templates to make issues easier to track.
 
 Interested in joining the team? See our [open roles](https://www.warp.dev/careers) and feel free to email us: hello at warpdotdev
 
