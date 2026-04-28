@@ -38,25 +38,26 @@ We try to release an update weekly, typically on Thursdays. Read our [changelog 
 
 ## Issues, Bugs, and Feature Requests
 
-Please [search](https://github.com/warpdotdev/warp/issues?q=is%3Aissue+is%3Aopen+a+sort%3Areactions-%2B1-desc) through our existing issues for your bug (including workarounds) or feature request.
+Please [search](https://github.com/warpdotdev/warp/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc) through our existing issues for your bug (including workarounds) or feature request.
 
 If you can't find a solution above, please file issue requests [in this repo!](https://github.com/warpdotdev/warp/issues/new/choose)
 We kindly ask that you please use our issue templates to make the issues easier to track for our team.
 
-## Open Source & Contributing
+## Open-Source & Contributing
 
-We are planning to first open-source our Rust UI framework, and then parts and potentially all of our client codebase. The server portion of Warp will remain closed-source for now.
+Warp's client codebase is now open-source and lives in [`warpdotdev/warp`](https://github.com/warpdotdev/warp).
 
-You can see how we’re thinking about open source here: [https://github.com/warpdotdev/Warp/discussions/400](https://github.com/warpdotdev/Warp/discussions/400)
+We welcome community contributions — see [CONTRIBUTING.md](https://github.com/warpdotdev/warp/blob/main/CONTRIBUTING.md) for the full flow, including how to build the repo locally and our `ready-to-spec` / `ready-to-implement` labels for picking up work.
 
-As a side note, we are open-sourcing our extension points as we go. The community has already been [contributing new themes](https://github.com/warpdotdev/themes), and our [Workflows repository](https://github.com/warpdotdev/workflows) is open for sharing and collaborating on useful command patterns.
+For a live overview of issue triage, agent activity, and what's ready to pick up, check out [build.warp.dev](https://build.warp.dev) — the community dashboard for contributions to the open-source Warp repo.
 
-Interested in joining the team? See our [open roles](https://www.warp.dev/careers) and feel free to email us: hello at warpdotdev
+We also open-source our extension points as we go. The community has already been [contributing new themes](https://github.com/warpdotdev/themes), and our [Workflows repository](https://github.com/warpdotdev/workflows) is open for sharing and collaborating on useful command patterns.
+
 
 ## Support and Questions
 
 1. See our [docs](https://docs.warp.dev/) for a comprehensive guide to Warp's features.
-2. Join our [Slack Community](https://go.warp.dev/join-preview) or [Discord](https://discord.com/invite/warpdotdev) to connect with other users and get help from the Warp team.
+2. Join our [Slack Community](https://go.warp.dev/join-preview) to connect with other users and get help from the Warp team.
 3. Try our [Preview build](https://www.warp.dev/download-preview) to test Warp's newest and latest experimental features.
 
 For anything else, please don't hesitate to reach out via email at hello at warpdotdev
