@@ -47,7 +47,7 @@ We kindly ask that you please use our issue templates to make the issues easier 
 
 Warp's client codebase is now open-source and lives in [`warpdotdev/warp`](https://github.com/warpdotdev/warp).
 
-We welcome community contributions — see [CONTRIBUTING.md](https://github.com/warpdotdev/warp/blob/main/CONTRIBUTING.md) for the full flow, including how to build the repo locally and our `ready-to-spec` / `ready-to-implement` labels for picking up work.
+We welcome community contributions — see [CONTRIBUTING.md](https://github.com/warpdotdev/warp/blob/master/CONTRIBUTING.md) for the full flow, including how to build the repo locally and our `ready-to-spec` / `ready-to-implement` labels for picking up work.
 
 For a live overview of issue triage, agent activity, and what's ready to pick up, check out [build.warp.dev](https://build.warp.dev) — the community dashboard for contributions to the open-source Warp repo.
 
