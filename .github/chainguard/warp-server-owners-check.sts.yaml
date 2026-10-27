@@ -1,4 +1,6 @@
 issuer: https://token.actions.githubusercontent.com
 subject_pattern: repo:warpdotdev/[^:]+:.*
+claim_pattern:
+  job_workflow_ref: warpdotdev/[^/]+/\.github/workflows/check_approvals\.yml@.+
 permissions:
   members: read
